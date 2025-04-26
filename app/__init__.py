@@ -1,12 +1,11 @@
 from flask import Flask
-
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+from app.my_space import my_space_bp
 
 
-if __name__ == '__main__':
-    app.run()
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object('config.Config')
+
+    app.register_blueprint(my_space_bp)
+
+    return app
