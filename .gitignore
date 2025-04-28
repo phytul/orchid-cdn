@@ -1,3 +1,5 @@
 .idea
+.venv
 .flaskenv
 .DS_Store
+__pycache__
