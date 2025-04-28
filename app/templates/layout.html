@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- 设置中文语言环境 -->
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码声明 -->
+    <title>Layout</title>
+</head>
+<body>
+    <!-- 导航栏 -->
+
+    <header>
+        {% block header %}
+        <div>
+            <span>返回首页</span>
+            <span>我的</span>
+        </div>
+        <div>
+            <span>兰韵</span>
+            <span>寒梅</span>
+            <span>清竹</span>
+            <span>雅菊</span>
+        </div>
+        {% endblock %}
+    </header>
+
+    <!-- 左侧栏 -->
+
+    <aside>
+        {% block aside %}
+        <div>素材包</div>
+        <div>素材中心</div>
+        <div>分组</div>
+        {% endblock %}
+    </aside>
+
+    <!-- main部分 -->
+
+    <main>
+        {% block main %}
+        <div>主体部分</div>
+        {% endblock %}
+    </main>
+
+    <!-- 页脚 -->
+
+    <footer>
+        {% block footer %}
+        <div>感谢收看！</div>
+        <div>联系方式：xxx-xxxx-xxxx</div>
+        {% endblock %}
+    </footer>
+
+</body>
+</html>
