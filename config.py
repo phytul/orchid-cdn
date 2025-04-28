@@ -1,4 +1,7 @@
-class Config(object):
-    def config(self):
-        print('config')
-        return
+class DevConfig(object):
+    DEBUG = True
+    TESTING = True
+
+class ProdConfig(object):
+    DEBUG = False
+    TESTING = False
