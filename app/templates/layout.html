@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- 设置中文语言环境 -->
+<head>
+    <meta charset="UTF-8"> <!-- 字符编码声明 -->
+    <title>
+        {% block title %}
+            兰韵
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+</head>
+<body>
+<!-- 导航栏 -->
+
+<header>
+    {% block header %}
+        <div class="header-left">
+            <span>兰韵</span>
+            <span>寒梅</span>
+            <span>清竹</span>
+            <span>雅菊</span>
+        </div>
+        <div class="header-right">
+            <span>返回首页</span>
+            <span>我的</span>
+        </div>
+    {% endblock %}
+</header>
+
+<!-- 左侧栏 -->
+
+<aside>
+    {% block aside %}
+        <div>素材包</div>
+        <div>素材中心</div>
+        <div>分组</div>
+    {% endblock %}
+</aside>
+
+<!-- main部分 -->
+
+<main>
+    <div class="main-container">
+        {% block main %}
+            <div>主体部分</div>
+        {% endblock %}
+    </div>
+
+    <footer>
+        {% block footer %}
+            <div>感谢收看！</div>
+            <div>联系方式：xxx-xxxx-xxxx</div>
+        {% endblock %}
+    </footer>
+</main>
+
+</body>
+</html>

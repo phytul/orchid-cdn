@@ -1,12 +1,21 @@
+import os
+
 from flask import Flask
+from app.routes import main_bp
+from config import ProdConfig, DevConfig
 
-app = Flask(__name__)
+dict_config = {
+    "development": DevConfig,
+    "production": ProdConfig,
+}
 
+def create_app(options):
+    app = Flask(__name__)
+    options = dict_config[options['env']]
+    app.config.from_object(options)
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+    os.environ["FLASK_DEBUG"] = '1' if options.DEBUG else '0'
 
+    app.register_blueprint(main_bp)
 
-if __name__ == '__main__':
-    app.run()
+    return app
