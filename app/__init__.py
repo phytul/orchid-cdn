@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask
-from app.pages.my_space import my_space_bp
+from app.routes import main_bp
 from config import ProdConfig, DevConfig
 
 dict_config = {
@@ -16,6 +16,6 @@ def create_app(options):
 
     os.environ["FLASK_DEBUG"] = '1' if options.DEBUG else '0'
 
-    app.register_blueprint(my_space_bp)
+    app.register_blueprint(main_bp)
 
     return app
