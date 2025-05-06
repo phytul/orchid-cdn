@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask
-from app.my_space import my_space_bp
+from app.pages.my_space import my_space_bp
 from config import ProdConfig, DevConfig
 
 dict_config = {
