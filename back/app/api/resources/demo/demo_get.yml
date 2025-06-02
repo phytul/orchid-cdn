@@ -1,0 +1,20 @@
+DEMO GET 接口
+---
+tags:
+  - DEMO 分类
+description: 此处是描述内容
+responses:
+  200:
+    description: 成功返回消息
+    schema:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: 是否成功
+        message:
+          type: string
+          description: 返回消息
+    example:
+      success: true
+      message: 成功返回消息
