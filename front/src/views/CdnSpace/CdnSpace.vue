@@ -6,4 +6,8 @@
 
 <script setup lang="ts"></script>
 
-<style scoped src="./styles.less" />
+<style scoped>
+h1 {
+  color: red;
+}
+</style>
