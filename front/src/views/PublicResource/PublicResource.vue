@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>CdnSpace</span>
+    <span>PublicResource</span>
   </div>
 </template>
 

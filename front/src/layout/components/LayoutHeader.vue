@@ -12,15 +12,16 @@
 <style scoped lang="less">
 .layout-header {
   display: flex;
+  width: 100vw;
   height: 60px;
   line-height: 60px;
-  background-color: #ffecec;
+  background-color: #986e99;
   box-shadow: 0 2px 8px rgba(0, 21, 41, 0.08);
 
   .header-left {
     .title {
       padding: 0 24px;
-      color: #685e60;
+      color: #fff;
     }
   }
 }

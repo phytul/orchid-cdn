@@ -1,4 +1,4 @@
-<template>Footer</template>
+<template><scoped /></template>
 
 <script setup lang="ts"></script>
 

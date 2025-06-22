@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CdnSpace from '@/views/CdnSpace/CdnSpace.vue'
-import LayoutDefault from '@/layout/LayoutDefault/LayoutDefault.vue'
+import DefaultLayout from '@/layout/DefaultLayout.vue'
 import HomePage from '@/views/HomePage/HomePage.vue'
+import PublicResource from '@/views/PublicResource/PublicResource.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,7 +10,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'main',
-      component: LayoutDefault,
+      component: DefaultLayout,
+      // props: { hiddenMenus: true },
       children: [
         {
           path: '/',
@@ -24,6 +26,11 @@ const router = createRouter({
           path: '/cdn-space',
           name: 'cdn-space',
           component: CdnSpace,
+        },
+        {
+          path: '/public-resource',
+          name: 'public-resource',
+          component: PublicResource,
         },
       ],
     },
