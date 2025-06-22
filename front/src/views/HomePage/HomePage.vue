@@ -1,5 +1,7 @@
 <template>
-    <div>HomePage</div>
+  <div>HomePage</div>
+  <el-button type="primary">Default</el-button>
+  <el-button>Default</el-button>
 </template>
 
 <script setup lang="ts"></script>
