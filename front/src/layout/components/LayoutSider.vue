@@ -12,6 +12,5 @@
   width: 200px;
   background-color: #ffedec;
   position: fixed;
-  box-shadow: 0 0 10px #654b664d;
 }
 </style>

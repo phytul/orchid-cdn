@@ -51,6 +51,7 @@ const menus = [
     box-sizing: border-box;
     flex-grow: 1;
     overflow-y: auto;
+    box-shadow: 0 0 10px inset #654b667b;
   }
 }
 </style>
